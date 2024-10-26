@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #00ff62;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.alien-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Space between boxes */
+}
+
+@media (max-width: 600px) {
+    .alien-list {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust gap for smaller screens if needed */
+    }
+}
+.alien {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 1px solid #57fc0a;
+    border-radius: 5px;
+    overflow: hidden;
+    width: calc(50% - 10px); /* Two boxes per row with some space */
+    box-shadow: 0 2px 5px rgba(202, 197, 197, 0.1);
+    box-sizing: border-box; /* Ensure padding/border are included in width */
+}
+@media (max-width: 600px) {
+    .alien {
+        flex-direction: column; /* Stack items vertically */
+        width: calc(80% - 10px);
+        align-items: center;
+        
+    }
+}
+
+.alien img {
+    width: 100%;
+    height: auto;
+}
+
+.alien h2 {
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.alien p {
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* .image-container {
+    position: relative; /* To position the description absolutely */
+/*}
+
+.description {
+    position: absolute; /* Positioning it absolutely within the container*/
+    /* bottom: 0; /* Align to the bottom */
+    /*left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    /*color: white;
+    padding: 10px; /* Padding for better visibility */
+    /*opacity: 0; /* Initially hidden */
+    /*transition: opacity 0.3s; /* Smooth transition */
+    /*pointer-events: none; Prevents interaction */
+/*}
+
+.image-container:hover .description {
+    opacity: 1; /* Show description on hover */
+/*} */
